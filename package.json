@@ -1,0 +1,19 @@
+{
+  "name": "speakeasy",
+  "version": "1.0.0",
+  "description": "A chat application for the corona virus",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Max Carlquist",
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "^4.17.1",
+    "moment": "^2.24.0",
+    "morgan": "~1.9.0",
+    "socket.io": "^2.3.0"
+  }
+}

@@ -1,0 +1,15 @@
+#home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; }
+  #home .tagline h1 {
+    text-align: center; }
+
+#chatroom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; }
+  #chatroom .tagline h1 {
+    text-align: center; }
