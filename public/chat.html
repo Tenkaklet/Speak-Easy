@@ -51,7 +51,7 @@
     </main>
     <!-- Doctor Modal -->
 
-    <div class="ui modal">
+    <div class="ui modal doctor">
         <i class="close icon"></i>
         <div class="header">
             Verification
@@ -62,24 +62,55 @@
             </div>
             <div class="description">
                 <form class="ui form" id="verification-form">
-                    <div class="field">
+                    <!-- <div class="field">
                         <label>First Name</label>
                         <input type="text" name="first-name" id="first-name" placeholder="First Name">
-                    </div>
+                    </div> -->
                     <div class="field">
+                        <label>What is your profession?</label>
+                        <div class="dropdown">
+                            <select name="room" id="profession" class="ui fluid dropdown">
+                                <option value="doctor">Doctor</option>
+                                <option value="psychologist">Psychologist</option>
+                                <option value="nurse">Nurse</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- <div class="field">
                         <label>Last Name</label>
                         <input type="text" name="last-name" id="last-name" placeholder="Last Name">
-                    </div>
+                    </div> -->
                     <div class="field">
                         <p>Your information will not be stored...</p>
                     </div>
-                    <button class="ui button" type="submit">Submit</button>
+                    <button class="ui button">Submit</button>
                 </form>
             </div>
         </div>
         <div class="actions">
             <div class="ui button">Cancel</div>
             <div class="ui button">OK</div>
+        </div>
+    </div>
+
+    <!-- Result Modal -->
+    <div class="ui basic modal">
+        <div class="ui icon header">
+            <i class="archive icon"></i>
+            Archive Old Messages
+        </div>
+        <div class="content">
+            <p>Your inbox is getting full, would you like us to enable automatic archiving of old messages?</p>
+        </div>
+        <div class="actions">
+            <div class="ui red basic cancel inverted button">
+                <i class="remove icon"></i>
+                No
+            </div>
+            <div class="ui green ok inverted button">
+                <i class="checkmark icon"></i>
+                Yes
+            </div>
         </div>
     </div>
 

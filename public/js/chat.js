@@ -59,10 +59,10 @@ const showUsers = users => {
     usersList.innerHTML = `${users.map(user => `<li>${isMedical(user.role)}${user.username}</li>`).join('')}`;
 };
 
-const isMedical = state => {
-    if(state === 'yes') {
+const isMedical = role => {
+    if(role === 'yes') {
         return `<i class="heartbeat icon"></i>`
-    } else if (state  === 'no') {
+    } else if (role  === 'no') {
         return `<i class="user icon"></i>`;
     }
 };
