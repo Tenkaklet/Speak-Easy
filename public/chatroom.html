@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <nav class="ui secondary menu stackable">
+    <nav class="ui secondary menu">
         <a href="/" class="item">Home</a>
         <a href="/info" class="item">More Information</a>
         <div class="right menu">
@@ -19,6 +19,50 @@
                 Tracker</a>
         </div>
     </nav>
+    <main class="ui container fade-in">
+            <div id="alert"></div>
+            <section class="ui segment raised ui two column divided grid stackable">
+                <div class="two column row">
+                    <article class="three wide column">
+                        <div class="row">
+                            <h1 class="ui dividing header" id="chat-room-name"></h1>
+                            <ul id="user-list">
+                                <li>User</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="nine wide column">
+                        <div class="ui comments">
+                            <div class="comment">
+                                <a class="avatar">
+                                    <img src="/images/avatar/small/matt.jpg">
+                                </a>
+                                <div class="content">
+                                    <a class="author">Matt</a>
+                                    <div class="metadata">
+                                        <span class="date">Today at 5:42PM</span>
+                                    </div>
+                                    <div class="text">
+                                        How artistic!
+                                    </div>
+                                    <div class="actions">
+                                        <a class="reply">Reply</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <form class="ui reply form">
+                                <div class="field">
+                                    <textarea></textarea>
+                                </div>
+                                <div class="ui blue labeled submit icon button">
+                                    <i class="icon edit"></i> Add Reply
+                                </div>
+                            </form>
+                        </div>
+                    </article>
+                </div>
+            </section>
+    </main>
 </body>
 <script src="/js/jquery.min.js"></script>
 <script src="/js/semantic.min.js"></script>

@@ -5,7 +5,7 @@ $(() => {
         e.preventDefault();
         const username = $('#username').val();
         const room = $('#room').val();
-        console.log(username, room);
+        window.localStorage.setItem('user', username);
         $.ajax({
             url: '/chat',
             data: {
