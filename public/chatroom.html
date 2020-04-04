@@ -33,30 +33,14 @@
                     </article>
                     <article class="nine wide column">
                         <div class="ui comments">
-                            <div class="comment">
-                                <a class="avatar">
-                                    <img src="/images/avatar/small/matt.jpg">
-                                </a>
-                                <div class="content">
-                                    <a class="author">Matt</a>
-                                    <div class="metadata">
-                                        <span class="date">Today at 5:42PM</span>
-                                    </div>
-                                    <div class="text">
-                                        How artistic!
-                                    </div>
-                                    <div class="actions">
-                                        <a class="reply">Reply</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <form class="ui reply form">
+                            <article id="messages"></article>
+                            <form class="ui reply form" id="chat-form">
                                 <div class="field">
-                                    <textarea></textarea>
+                                    <input type="text" id="message" placeholder="Enter message..." required>
                                 </div>
-                                <div class="ui blue labeled submit icon button">
-                                    <i class="icon edit"></i> Add Reply
-                                </div>
+                                <button type="submit" class="ui blue labeled submit icon button">
+                                    <i class="icon edit"></i> Send
+                                </button>
                             </form>
                         </div>
                     </article>

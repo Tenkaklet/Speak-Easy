@@ -11,6 +11,11 @@
     display: none;
 }
 
+#messages {
+    overflow: auto;
+    height: 30rem;
+}
+
 .fade-in {
     display: block;
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */

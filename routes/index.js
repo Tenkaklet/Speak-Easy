@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var path = require('path');
 var express = require('express');
-
+var https = require('https');
 
 /* GET info page. */
 router.get('/info', function (req, res, next) {
@@ -25,6 +25,15 @@ router.post('/chat', function (req, res, next) {
   res.json({
     room: `/chat/${req.body.room}`,
   });
+});
+
+router.post('/verify', function (req, res, next) {
+  const options = {
+    hostname: 'https://api.betterdoctor.com/2016-03-01',
+    port: 443,
+    path: '/todos',
+    method: 'GET'
+  }
 });
 
 

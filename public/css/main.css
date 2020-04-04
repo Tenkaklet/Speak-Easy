@@ -24,6 +24,10 @@
 .none {
   display: none; }
 
+#messages {
+  overflow: auto;
+  height: 30rem; }
+
 .fade-in {
   display: block;
   -webkit-animation: fadein 2s;

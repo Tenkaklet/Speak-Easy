@@ -20,10 +20,10 @@ const io = require('socket.io').listen(server);
 io.on('connection', (con) => {
   console.log('connected');
   con.on('enteredChat', (chat) => {
-    const user = userJoin(con.id, chat.user, chat.room);
+    const user = userJoin(con.id, chat.user, chat.room, chat.medical);
     con.join(user.room);
 
-    con.emit('message', formatMessage(bot, 'Welcome to Speak Easy!'));
+    con.emit('enter', formatMessage(bot, 'Welcome to Speak Easy!'));
     con.broadcast.to(user.room).emit('notification', formateNotification(bot, `${user.username} has joined the room`));
     io.to(user.room).emit('roomUsers', {
       room: user.room,
@@ -31,8 +31,23 @@ io.on('connection', (con) => {
     });
   });
   con.on('chatMessage', message => {
-    
+    const user = getCurrentUser(con.id);
+    io.to(user.room).emit('chatMessage', formatMessage(user.username, message));
   });
+
+  con.on('disconnect', () => {
+    const user = userLeave(con.id);
+
+    if(user) {
+      io.to(user.room).emit('leave', formateNotification(bot, `${user.username} has left the chat`));
+      io.to(user.room).emit('roomUsers', {
+        room: user.room,
+        users: getRoomUsers(user.room)
+      });
+    }
+  });
+
+
 }); // NOTE: End of connection
 
 
