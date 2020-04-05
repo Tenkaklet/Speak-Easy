@@ -60,15 +60,19 @@ const showUsers = users => {
 };
 
 const isMedical = role => {
-    if(role === 'yes') {
-        return `<i class="heartbeat icon"></i>`
-    } else if (role  === 'no') {
+    if(role === 'nurse') {
+        return `<i class="user md icon"></i>`
+    } else if (role  === 'doctor') {
+        return `<i class="stethoscope icon"></i>`;
+    } else if (role === 'psychologist') {
+        return `<i class="comments outline icon"></i>`;
+    } else {
         return `<i class="user icon"></i>`;
     }
 };
 
 const roomNameFunction = name => {
-    roomName.innerHTML = name.toUpperCase();
+    roomName.innerHTML = decodeURI(name.toUpperCase());
 };
 
 const showMessage = message => {

@@ -4,7 +4,10 @@
   align-items: center;
   height: 50vh; }
   #home .tagline h1 {
-    text-align: center; }
+    text-align: center;
+    font-size: 45px; }
+  #home .tagline p {
+    font-size: 20px; }
 
 #chatroom {
   display: flex;
@@ -124,3 +127,6 @@
   to {
     opacity: 0;
     display: none; } }
+
+#info h1, #info p {
+  text-align: center; }
