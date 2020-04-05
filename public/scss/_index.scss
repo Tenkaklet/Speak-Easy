@@ -1,8 +1,4 @@
 #home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50vh;
     .tagline {
         h1 {
             text-align: center;
@@ -10,6 +6,13 @@
         }
         p {
             font-size: 20px;
-        }
+        }        
+    }
+    h2 {
+        text-align: center;
+    }
+    @media screen and (max-width: 375px) {
+        position: relative;
+        top: 10px;
     }
 }

@@ -15,7 +15,7 @@
         <a href="/" class="item">Home</a>
         <a href="/info" class="item">More Information</a>
         <div class="right menu">
-            <a href="https://tenkaklet.github.io/Covid-Tracker/" target="_blank" class="item active">Covid-19
+            <a href="https://tenkaklet.github.io/Covid-Tracker/" target="_blank" class="item">Covid-19
                 Tracker</a>
         </div>
     </nav>
@@ -33,7 +33,9 @@
                         <select name="room" id="room" class="ui fluid dropdown">
                             <option value="general">General</option>
                             <option value="qurantine">In qurantine</option>
+                            <option value="meetup">Meetup</option>
                             <option value="medical advice">Medical Advice</option>
+                            <option value="safe talk">Safe Talk</option>
                         </select>
                     </div>
                 </div>
@@ -48,6 +50,12 @@
                 </div>
                 <button class="ui button basic secondary" type="submit">Enter Room</button>
             </form>
+            <div class="ui message">
+                <div class="header">
+                    General Information
+                </div>
+                <p>This is a safe space where anyone it warmly welcomed to share experiences and thoughts and connect with like-minded people.</p>
+              </div>
         </div>
     </main>
     <!-- Doctor Modal -->
@@ -58,15 +66,8 @@
             Verification
         </div>
         <div class="image content">
-            <div class="image">
-                <img src="https://placehold.it/300" alt="">
-            </div>
             <div class="description">
                 <form class="ui form" id="verification-form">
-                    <!-- <div class="field">
-                        <label>First Name</label>
-                        <input type="text" name="first-name" id="first-name" placeholder="First Name">
-                    </div> -->
                     <div class="field">
                         <label>What is your profession?</label>
                         <div class="dropdown">
@@ -77,40 +78,11 @@
                             </select>
                         </div>
                     </div>
-                    <!-- <div class="field">
-                        <label>Last Name</label>
-                        <input type="text" name="last-name" id="last-name" placeholder="Last Name">
-                    </div> -->
                     <div class="field">
                         <p>Your information will not be stored...</p>
                     </div>
                     <button class="ui button" type="submit">Submit</button>
                 </form>
-            </div>
-        </div>
-        <div class="actions">
-            <div class="ui button">Cancel</div>
-            <div class="ui button">OK</div>
-        </div>
-    </div>
-
-    <!-- Result Modal -->
-    <div class="ui basic modal">
-        <div class="ui icon header">
-            <i class="archive icon"></i>
-            Archive Old Messages
-        </div>
-        <div class="content">
-            <p>Your inbox is getting full, would you like us to enable automatic archiving of old messages?</p>
-        </div>
-        <div class="actions">
-            <div class="ui red basic cancel inverted button">
-                <i class="remove icon"></i>
-                No
-            </div>
-            <div class="ui green ok inverted button">
-                <i class="checkmark icon"></i>
-                Yes
             </div>
         </div>
     </div>

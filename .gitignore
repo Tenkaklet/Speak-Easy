@@ -1,3 +1,5 @@
 config.codekit3
 node_modules
 ngrok
+
+public/.DS_Store

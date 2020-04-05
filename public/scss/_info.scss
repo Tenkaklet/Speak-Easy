@@ -2,4 +2,12 @@
     h1, p {
         text-align: center;
     }
+
+    img {
+        margin: auto;
+        margin-bottom: 1rem;
+        max-width: 200px;
+        max-height: 200px;
+        display: block;
+    }
 }

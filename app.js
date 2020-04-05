@@ -18,12 +18,11 @@ const bot = 'Speak Easy Bot';
 const io = require('socket.io').listen(server);
 
 io.on('connection', (con) => {
-  console.log('connected');
   con.on('enteredChat', (chat) => {
     const user = userJoin(con.id, chat.user, chat.room, chat.medical);
     con.join(user.room);
 
-    con.emit('enter', formatMessage(bot, 'Welcome to Speak Easy!'));
+    con.emit('enter', formatMessage(bot, 'Welcome to Speak Easy! No chat record is stored in a database or used in any other way.'));
     con.broadcast.to(user.room).emit('notification', formateNotification(bot, `${user.username} has joined the room`));
     io.to(user.room).emit('roomUsers', {
       room: user.room,

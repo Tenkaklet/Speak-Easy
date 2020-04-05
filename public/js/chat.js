@@ -83,7 +83,7 @@ const showMessage = message => {
         <img src="https://api.adorable.io/avatars/285/${message.username}@adorable.png">
     </div>
     <div class="content">
-        <p class="author">${message.username}</p>
+        <span class="author">${message.username}</span>
         <div class="metadata">
             <span class="date">${message.time}</span>
         </div>
