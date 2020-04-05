@@ -6,7 +6,7 @@ const session = require('express-session');
 var index = require('./routes/index');
 const { formatMessage, formateNotification } = require('./helper/messages');
 const { userJoin, getCurrentUser, userLeave, getRoomUsers } = require('./helper/users');
-const PORT = 3000 || process.env.PORT;
+const PORT = process.env.PORT || 3000;
 var app = express();
 const server = app.listen(PORT, function () {
   console.log(`Running on Port ${PORT}`);
